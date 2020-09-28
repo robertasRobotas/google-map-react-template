@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Map from './components/Map';
 import Places from './components/Places';
 
 import './App.css';
 
 function App() {
+  const [selectedPlace, setSelectedPlace] = useState({
+    lat: 59.95,
+    lng: 30.33,
+  });
   return (
     <div className='Main'>
-      <Places width={'30vw'} height={'100vh'} />
-      <Map width={'70vw'} height={'100vh'} />
+      <Places
+        width={'30vw'}
+        height={'100vh'}
+        setSelectedPlace={setSelectedPlace}
+      />
+      <Map width={'70vw'} height={'100vh'} selectedPlace={selectedPlace} />
     </div>
   );
 }

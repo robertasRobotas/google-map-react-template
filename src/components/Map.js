@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const AnyReactComponent = ({ text }) => (
+  <div style={{ color: 'red' }}>{text}</div>
+);
 
-const Map = ({ height, width }) => {
-  const [center, setCenter] = useState({ lat: 59.95, lng: 30.33 });
+const Map = ({ height, width, selectedPlace }) => {
   const [zoom, setZoom] = useState(11);
 
   return (
@@ -14,14 +15,12 @@ const Map = ({ height, width }) => {
         width: width,
         background: 'purple',
         float: 'right',
-        height: '100vh',
-        width: '70%',
       }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: 'AIzaSyC87zB-AkjcA1HQFBkM370neC_vj1Y2PMo' }}
-        defaultCenter={center}
+        defaultCenter={selectedPlace}
         defaultZoom={zoom}>
-        <AnyReactComponent lat={69.955413} lng={30.337844} text='My Marker' />
+        <AnyReactComponent lat={59.955413} lng={30.337844} text='My Marker' />
       </GoogleMapReact>
     </div>
   );
