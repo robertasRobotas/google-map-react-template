@@ -8,7 +8,7 @@ const Places = ({ width, height, setSelectedPlace }) => {
     { lat: 79.95, lng: 40.33, title: 'cc' },
     { lat: 89.95, lng: 50.33, title: 'dd' },
     { lat: 59.95, lng: 30.33, title: 'ee' },
-    { lat: 59.95, lng: 30.33, title: 'ff' },
+    { lat: 59.95, lng: 30.34, title: 'ff' },
   ]);
   return (
     <div
@@ -20,10 +20,7 @@ const Places = ({ width, height, setSelectedPlace }) => {
       }}>
       <div className='placesTitle'>Select place</div>
       {mockData.map((place) => (
-        <PlaceSelection
-          placeTitle={place.title}
-          setSelectedPlace={setSelectedPlace}
-        />
+        <PlaceSelection place={place} setSelectedPlace={setSelectedPlace} />
       ))}
     </div>
   );
