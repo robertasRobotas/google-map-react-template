@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import PlaceSelection from './PlaceSelection';
+import PlaceSelection from '../Molecules/PlaceSelection';
 
 const Places = ({ width, height, setSelectedPlace }) => {
+  const [places, setPlaces] = useState([]);
+
   const [mockData, setMockData] = useState([
     { lat: 59.95, lng: 40.33, title: 'aa' },
     { lat: 69.95, lng: 60.33, title: 'bb' },
@@ -18,9 +20,14 @@ const Places = ({ width, height, setSelectedPlace }) => {
         width: width,
         float: 'left',
       }}>
-      <div className='placesTitle'>Select place</div>
+      <div className='placesPrimaryTitle'>Make a Route</div>
+      <div className='placesSecondaryTitle'>Add place</div>
       {mockData.map((place) => (
-        <PlaceSelection place={place} setSelectedPlace={setSelectedPlace} />
+        <PlaceSelection
+          key={`${place.lat}${place.lng}`}
+          place={place}
+          setSelectedPlace={setSelectedPlace}
+        />
       ))}
     </div>
   );

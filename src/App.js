@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Map from './components/Map';
-import Places from './components/Places';
+import Map from './components/Organisms/Map';
+import Places from './components/Organisms/Places';
 
 import './App.css';
 
