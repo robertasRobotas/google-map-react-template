@@ -35,3 +35,11 @@
 .placeSelectionButton:hover {
   background-color: rgb(139, 253, 215, 1);
 }
+
+.typePlaceInput {
+  width: 80%;
+}
+
+.typePlaceButton {
+  width: 10%;
+}
