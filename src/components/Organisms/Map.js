@@ -8,7 +8,6 @@ const AnyReactComponent = ({ text }) => (
 
 const Map = ({ height, width, selectedPlace }) => {
   const [zoom, setZoom] = useState(11);
-  console.log('secret', secret);
 
   return (
     <div
