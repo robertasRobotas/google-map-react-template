@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PlaceSelection from '../Molecules/PlaceSelection';
+import AddPlaceButton from '../Molecules/AddPlaceButton';
 
 const Places = ({ width, height, setSelectedPlace }) => {
   const [places, setPlaces] = useState([]);
@@ -22,6 +23,7 @@ const Places = ({ width, height, setSelectedPlace }) => {
       }}>
       <div className='placesPrimaryTitle'>Make a Route</div>
       <div className='placesSecondaryTitle'>Add place</div>
+      <AddPlaceButton />
       {mockData.map((place) => (
         <PlaceSelection
           key={`${place.lat}${place.lng}`}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
+import secret from '../../secret';
 
 const AnyReactComponent = ({ text }) => (
   <div style={{ color: 'red' }}>{text}</div>
@@ -7,6 +8,7 @@ const AnyReactComponent = ({ text }) => (
 
 const Map = ({ height, width, selectedPlace }) => {
   const [zoom, setZoom] = useState(11);
+  console.log('secret', secret);
 
   return (
     <div
@@ -17,7 +19,7 @@ const Map = ({ height, width, selectedPlace }) => {
         float: 'right',
       }}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: 'AIzaSyC87zB-AkjcA1HQFBkM370neC_vj1Y2PMo' }}
+        bootstrapURLKeys={{ key: secret.googleApiKey }}
         center={selectedPlace}
         defaultZoom={zoom}>
         <AnyReactComponent lat={59.955413} lng={30.337844} text='My Marker' />

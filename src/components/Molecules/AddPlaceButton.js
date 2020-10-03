@@ -5,6 +5,7 @@ const AddPlaceButton = () => {
     <div className='addPlaceButtonWrapper'>
       <div>type place</div>
       <div>select place</div>
+      <div>your place</div>
     </div>
   );
 };
