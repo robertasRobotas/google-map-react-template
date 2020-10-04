@@ -24,7 +24,10 @@ const Places = ({ width, height, setSelectedPlace }) => {
       }}>
       <div className='placesPrimaryTitle'>Make a Route</div>
       <div className='placesSecondaryTitle'>Add place</div>
-      <AddPlaceButton getGeocode={getGeocode} />
+      <AddPlaceButton
+        getGeocode={getGeocode}
+        setSelectedPlace={setSelectedPlace}
+      />
       {mockData.map((place) => (
         <PlaceSelection
           key={`${place.lat}${place.lng}`}
