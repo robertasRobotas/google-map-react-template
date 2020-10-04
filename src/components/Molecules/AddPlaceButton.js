@@ -25,8 +25,8 @@ const AddPlaceButton = ({ getGeocode, setSelectedPlace }) => {
           go
         </button>
       </div>
-      <div>select place</div>
-      <div>your place</div>
+      <button className='selectPlaceButton'>select place on a map</button>
+      <button className='yourLocationButton'>your place</button>
     </div>
   );
 };

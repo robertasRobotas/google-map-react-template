@@ -41,5 +41,13 @@
 }
 
 .typePlaceButton {
-  width: 10%;
+  width: 17%;
+}
+
+.yourLocationButton {
+  width: 100%;
+}
+
+.selectPlaceButton {
+  width: 100%;
 }
