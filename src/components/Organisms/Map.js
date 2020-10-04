@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 import secret from '../../secret';
+import locationSign from '../../assets/photos/locationSign.png';
 
 const AnyReactComponent = ({ text }) => (
-  <div style={{ color: 'red' }}>{text}</div>
+  <img style={{ width: '30px' }} src={locationSign} />
 );
 
 const Map = ({ height, width, selectedPlace }) => {
@@ -21,7 +22,11 @@ const Map = ({ height, width, selectedPlace }) => {
         bootstrapURLKeys={{ key: secret.googleApiKey }}
         center={selectedPlace}
         defaultZoom={zoom}>
-        <AnyReactComponent lat={59.955413} lng={30.337844} text='My Marker' />
+        <AnyReactComponent
+          lat={selectedPlace.lat}
+          lng={selectedPlace.lng}
+          text='My Marker'
+        />
       </GoogleMapReact>
     </div>
   );
