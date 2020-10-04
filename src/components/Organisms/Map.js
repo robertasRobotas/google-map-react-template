@@ -4,7 +4,10 @@ import secret from '../../secret';
 import locationSign from '../../assets/photos/locationSign.png';
 
 const AnyReactComponent = ({ text }) => (
-  <img style={{ width: '30px' }} src={locationSign} />
+  <img
+    style={{ width: '30px', transform: 'translate(-100%, -100%)' }}
+    src={locationSign}
+  />
 );
 
 const Map = ({ height, width, selectedPlace }) => {
