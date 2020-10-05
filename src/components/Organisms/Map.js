@@ -3,7 +3,7 @@ import GoogleMapReact from 'google-map-react';
 import secret from '../../secret';
 import locationSign from '../../assets/photos/locationSign.png';
 
-const AnyReactComponent = ({ text }) => (
+const AnyReactComponent = () => (
   <img
     style={{ width: '30px', transform: 'translate(-50%, -100%)' }}
     src={locationSign}
