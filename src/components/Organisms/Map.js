@@ -26,11 +26,7 @@ const Map = ({ height, width, selectedPlace }) => {
         bootstrapURLKeys={{ key: secret.googleApiKey }}
         center={selectedPlace}
         defaultZoom={zoom}>
-        <AnyReactComponent
-          lat={selectedPlace.lat}
-          lng={selectedPlace.lng}
-          text='My Marker'
-        />
+        <AnyReactComponent lat={selectedPlace.lat} lng={selectedPlace.lng} />
       </GoogleMapReact>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PlaceSelection from '../Molecules/PlaceSelection';
-import AddPlaceButton from '../Molecules/AddPlaceButton';
+import AddPlaceSection from '../Molecules/AddPlaceSection';
 import { getGeocode, getGeolocation } from '../../helpers/apiCalls';
 
 const Places = ({ width, height, setSelectedPlace }) => {
@@ -22,7 +22,7 @@ const Places = ({ width, height, setSelectedPlace }) => {
       }}>
       <div className='placesPrimaryTitle'>Make a Route</div>
       <div className='placesSecondaryTitle'>Add place</div>
-      <AddPlaceButton
+      <AddPlaceSection
         getGeocode={getGeocode}
         setSelectedPlace={setSelectedPlace}
         getGeolocation={getGeolocation}

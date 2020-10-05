@@ -27,9 +27,17 @@ const AddPlaceButton = ({ getGeocode, getGeolocation, setSelectedPlace }) => {
       <button className='selectPlaceButton'>select place on a map</button>
       <button
         className='yourLocationButton'
-        onClick={() => getGeolocation().then((res) => console.log(res))}>
+        onClick={() =>
+          getGeolocation().then((res) => {
+            setSelectedPlace({
+              lat: res.data.location.lat,
+              lng: res.data.location.lng,
+            });
+          })
+        }>
         your place
       </button>
+      <button className='addPlaceButton'>Add place to Route</button>
     </div>
   );
 };
