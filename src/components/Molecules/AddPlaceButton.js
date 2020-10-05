@@ -15,6 +15,7 @@ const AddPlaceButton = ({ getGeocode, getGeolocation, setSelectedPlace }) => {
           className='typePlaceButton'
           onClick={() =>
             getGeocode(locationInput).then((res) => {
+              console.log('res', res);
               setSelectedPlace({
                 lat: res.data.results[0].geometry.location.lat,
                 lng: res.data.results[0].geometry.location.lng,
