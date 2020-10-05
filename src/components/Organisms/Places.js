@@ -4,8 +4,6 @@ import AddPlaceButton from '../Molecules/AddPlaceButton';
 import { getGeocode, getGeolocation } from '../../helpers/apiCalls';
 
 const Places = ({ width, height, setSelectedPlace }) => {
-  const [places, setPlaces] = useState([]);
-
   const [mockData, setMockData] = useState([
     { lat: 59.95, lng: 40.33, title: 'aa' },
     { lat: 69.95, lng: 60.33, title: 'bb' },
