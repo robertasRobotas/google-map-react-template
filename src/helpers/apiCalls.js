@@ -2,9 +2,11 @@ import axios from 'axios';
 import secrets from '../secret';
 
 const getGeocode = (location) =>
-  axios.get(
-    `https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=${secrets.googleApiKey}`
-  );
+  axios.post(`http://localhost:8085/googleApi/getGeocode`, {
+    data: {
+      location: location,
+    },
+  });
 
 const getGeolocation = () =>
   axios
