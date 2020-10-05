@@ -8,7 +8,12 @@ const getGeocode = (location) =>
 
 const getGeolocation = () =>
   axios.get(
-    `https://www.googleapis.com/geolocation/v1/geolocate?key=${secrets.googleApiKey}`
+    `https://www.googleapis.com/geolocation/v1/geolocate?key=${secrets.googleApiKey}`,
+    {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
   );
 
 export { getGeocode, getGeolocation };

@@ -5,7 +5,7 @@ import locationSign from '../../assets/photos/locationSign.png';
 
 const AnyReactComponent = ({ text }) => (
   <img
-    style={{ width: '30px', transform: 'translate(-100%, -100%)' }}
+    style={{ width: '30px', transform: 'translate(-50%, -100%)' }}
     src={locationSign}
   />
 );

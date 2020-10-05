@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PlaceSelection from '../Molecules/PlaceSelection';
 import AddPlaceButton from '../Molecules/AddPlaceButton';
-import { getGeocode } from '../../helpers/apiCalls';
+import { getGeocode, getGeolocation } from '../../helpers/apiCalls';
 
 const Places = ({ width, height, setSelectedPlace }) => {
   const [places, setPlaces] = useState([]);
@@ -27,6 +27,7 @@ const Places = ({ width, height, setSelectedPlace }) => {
       <AddPlaceButton
         getGeocode={getGeocode}
         setSelectedPlace={setSelectedPlace}
+        getGeolocation={getGeolocation}
       />
       {mockData.map((place) => (
         <PlaceSelection

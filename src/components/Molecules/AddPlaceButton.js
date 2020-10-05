@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const AddPlaceButton = ({ getGeocode, setSelectedPlace }) => {
+const AddPlaceButton = ({ getGeocode, getGeolocation, setSelectedPlace }) => {
   const [locationInput, setLocationInput] = useState('');
 
   return (
@@ -26,7 +26,11 @@ const AddPlaceButton = ({ getGeocode, setSelectedPlace }) => {
         </button>
       </div>
       <button className='selectPlaceButton'>select place on a map</button>
-      <button className='yourLocationButton'>your place</button>
+      <button
+        className='yourLocationButton'
+        onClick={() => getGeolocation().then((res) => console.log(res))}>
+        your place
+      </button>
     </div>
   );
 };
