@@ -16,7 +16,12 @@ function App() {
         height={'100vh'}
         setSelectedPlace={setSelectedPlace}
       />
-      <Map width={'70vw'} height={'100vh'} selectedPlace={selectedPlace} />
+      <Map
+        width={'70vw'}
+        height={'100vh'}
+        selectedPlace={selectedPlace}
+        setSelectedPlace={setSelectedPlace}
+      />
     </div>
   );
 }

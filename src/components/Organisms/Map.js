@@ -11,7 +11,7 @@ const AnyReactComponent = () => (
   />
 );
 
-const Map = ({ height, width, selectedPlace }) => {
+const Map = ({ height, width, selectedPlace, setSelectedPlace }) => {
   const [zoom, setZoom] = useState(11);
 
   return (
@@ -25,7 +25,10 @@ const Map = ({ height, width, selectedPlace }) => {
       <GoogleMapReact
         bootstrapURLKeys={{ key: secret.googleApiKey }}
         center={selectedPlace}
-        defaultZoom={zoom}>
+        defaultZoom={zoom}
+        onClick={(e) => {
+          setSelectedPlace({ lat: e.lat, lng: e.lng });
+        }}>
         <AnyReactComponent lat={selectedPlace.lat} lng={selectedPlace.lng} />
       </GoogleMapReact>
     </div>
